@@ -177,103 +177,106 @@
 <body>
 
 <div id="app">
-<header>
+    <header>
 
         <!-- Aquí van tus componentes Vue -->
 
-    <div class="logo">
-        <img src="{{ asset('images/logo.jpg') }}" alt="Logo">
-    </div>
-    <nav>
-        <ul>
-            <li><a href="#" data-section="inicio">Inicio</a></li>
-            <li><a href="#" data-section="productos">Productos</a></li>
-            <li><a href="#" data-section="contacto">Contacto</a></li>
-            <!-- Nueva sección Administrar Productos -->
-            <li><a href="#" data-section="administrar">Administrar Productos</a></li>
-        </ul>
-    </nav>
-    <div class="cart">
-        <a href="{{ route('cart.show') }}" style="display: flex; align-items: center;">
-            <img src="{{ asset('images/carrito.png') }}" alt="Carrito">
-            <span id="cart-count"></span>
-        </a>
-    </div>
-</header>
+        <div class="logo">
+            <img src="{{ asset('images/logo.jpg') }}" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" data-section="inicio">Inicio</a></li>
+                <li><a href="#" data-section="productos">Productos</a></li>
+                <li><a href="#" data-section="contacto">Contacto</a></li>
+                <!-- Nueva sección Administrar Productos -->
+                <li><a href="#" data-section="administrar">Administrar Productos</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <a href="{{ route('cart.show') }}" style="display: flex; align-items: center;">
+                <img src="{{ asset('images/carrito.png') }}" alt="Carrito">
+                <span id="cart-count"></span>
+            </a>
+        </div>
+    </header>
 
-<main>
-    <section id="inicio" class="active">
-        <h2>Bienvenido a nuestra tienda de gym</h2>
-        <p>Aquí puedes encontrar suplementos y accesorios para gym.</p>
-        <!-- Carrusel de imágenes -->
-        <div class="carousel">
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-            <div class="slides">
-                <div class="slide">
-                    <img src="{{ asset('images/carrusel1.jpeg') }}" alt="Imagen 1">
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('images/carrusel2.jpg') }}" alt="Imagen 2">
-                </div>
-                <div class="slide">
-                    <img src="{{ asset('images/carrusel3.jpg') }}" alt="Imagen 3">
+    <main>
+        <section id="inicio" class="active">
+            <h2>Bienvenido a nuestra tienda de gym</h2>
+            <p>Aquí puedes encontrar suplementos y accesorios para gym.</p>
+            <!-- Carrusel de imágenes -->
+            <div class="carousel">
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+                <div class="slides">
+                    <div class="slide">
+                        <img src="{{ asset('images/carrusel1.jpeg') }}" alt="Imagen 1">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ asset('images/carrusel2.jpg') }}" alt="Imagen 2">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ asset('images/carrusel3.jpg') }}" alt="Imagen 3">
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- Descripción del producto -->
-        <div class="product-description">
-            <img src="{{ asset('images/logo.jpg') }}" alt="Armaf Club de Nuit Oud">
-            <div class="description">
-                <h3>Fitness Plus Puerto Barrios</h3>
-                <p>El mejor gym de la region, aparte de ofrecer nuestros excelentes servicios también contamos con productos de alta calidad y certificados.</p>
-                <p><strong>También nuestro gym FITNESS PLUS ENTRE RIOS</strong> <!--- Asssss</p>-->
+            <!-- Descripción del producto -->
+            <div class="product-description">
+                <img src="{{ asset('images/logo.jpg') }}" alt="Armaf Club de Nuit Oud">
+                <div class="description">
+                    <h3>Fitness Plus Puerto Barrios</h3>
+                    <p>El mejor gym de la region, aparte de ofrecer nuestros excelentes servicios también contamos con productos de alta calidad y certificados.</p>
+                    <p><strong>También nuestro gym FITNESS PLUS ENTRE RIOS</strong> <!--- Asssss</p>-->
+                </div>
             </div>
-        </div>
 
-        <div class="product-description reverse">
-            <div class="description">
-                <h3>TU SEGUNDA CASA</h3>
-                <p> Cualquier persona es bienvenida.</p>
-                <p>Los mejores entrenadores.</p>
-                <p><strong>Direccion</strong> - PCP3+CP4, 9a Avenida, Puerto Barrios</p>
+            <div class="product-description reverse">
+                <div class="description">
+                    <h3>TU SEGUNDA CASA</h3>
+                    <p> Cualquier persona es bienvenida.</p>
+                    <p>Los mejores entrenadores.</p>
+                    <p><strong>Direccion</strong> - PCP3+CP4, 9a Avenida, Puerto Barrios</p>
+                </div>
+                <img src="{{ asset('images/gym.jpg') }}" alt="Jean Paul Gaultier Le Male Elixir">
             </div>
-            <img src="{{ asset('images/gym.jpg') }}" alt="Jean Paul Gaultier Le Male Elixir">
-        </div>
-    </section>
+            <div id="app">
+                <nasadata></nasadata>
+            </div>
+        </section>
 
 
 
-    <section id="productos">
-        <h2>Descubre nuestros productos</h2>
-        <input type="text" id="search-input" placeholder="Buscar productos...">
-        <div class="product-list" id="product-list">
-            <!-- Los productos se agregarán aquí dinámicamente -->
-        </div>
-    </section>
+        <section id="productos">
+            <h2>Descubre nuestros productos</h2>
+            <input type="text" id="search-input" placeholder="Buscar productos...">
+            <div class="product-list" id="product-list">
+                <!-- Los productos se agregarán aquí dinámicamente -->
+            </div>
+        </section>
 
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Para más información, contáctanos en info@fitnessplusgym.com.</p>
-    </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Para más información, contáctanos en info@fitnessplusgym.com.</p>
+        </section>
 
-    <!-- Sección Administrar Productos -->
+        <!-- Sección Administrar Productos -->
 
-    <section id="administrar">
-        <h2>Administrar Productos</h2>
-        <p>Desde aquí puedes agregar, editar o eliminar productos.</p>
-        <!-- Único contenedor #app -->
-        <br><br>
-        <div id="app">
-            <Carte></Carte>
-        </div>
-    </section>
+        <section id="administrar">
+            <h2>Administrar Productos</h2>
+            <p>Desde aquí puedes agregar, editar o eliminar productos.</p>
+            <!-- Único contenedor #app -->
+            <br><br>
+            <div id="app">
+                <Carte></Carte>
+            </div>
+        </section>
 
-</main>
+    </main>
 
-<footer>
-    <p>&copy; 2024 gymshark entre rios</p>
-</footer>
+    <footer>
+        <p>&copy; 2024 gymshark entre rios</p>
+    </footer>
 </div>
 
 <script>

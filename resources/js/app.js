@@ -27,6 +27,10 @@ app.component('Cart', Cart);
 import ProductosList from './components/ProductosList.vue';
 app.component('Carte', ProductosList);
 
+import NasaData from './components/NasaData.vue';
+app.component('nasadata', NasaData);
+
+
 
 
 

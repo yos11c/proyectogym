@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductoController;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 use App\Models\Producto;
 use Illuminate\Support\Facades\DB;
@@ -27,6 +28,10 @@ Route::get('/producto/{id}', function ($id) {
 Route::post('/carrito', [CartController::class, 'showCart'])->name('cart.show');
 
 
+Route::get('/nasa-proxy', function () {
+    $response = Http::get('http://tle.ivanstanojevic.me/api/tle');
+    return $response->json();
+});
 
 // Actualizar el carrito
 // Actualizar el carrito
@@ -57,3 +62,8 @@ Route::get('/cart', [CartController::class, 'shoCart'])->name('cart');
 Route::post('/carrito/add', [CartController::class, 'addToCart'])->name('cart.add');
 
 Route::post('/carrito/remove', [CartController::class, 'removeFromCart'])->name('cart.remove');
+
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+

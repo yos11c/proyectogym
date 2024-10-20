@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],
+    'allowed_origins' => ['http://192.168.56.1:8000/api/productos'],
 
     'allowed_origins_patterns' => [],
 
